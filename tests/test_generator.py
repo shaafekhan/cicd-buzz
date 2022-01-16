@@ -2,17 +2,17 @@ from buzz import generator
 
 
 def test_sample_single_word():
-    l = ('foo', 'bar', 'foobar')
-    word = generator.sample(l)
-    assert word in l
+    test_list = ('foo', 'bar', 'foobar')
+    word = generator.sample(test_list)
+    assert word in test_list
 
 
 def test_sample_multiple_words():
-    l = ('foo', 'bar', 'foobar')
-    words = generator.sample(l, 2)
+    test_list = ('foo', 'bar', 'foobar')
+    words = generator.sample(test_list, 2)
     assert len(words) == 2
-    assert words[0] in l
-    assert words[1] in l
+    assert words[0] in test_list
+    assert words[1] in test_list
     assert words[0] is not words[1]
 
 
